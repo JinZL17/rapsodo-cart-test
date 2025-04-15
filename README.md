@@ -18,7 +18,7 @@ This script automates the following flow on the Rapsodo website using Selenium:
 
 This script was designed iteratively to overcome the following real-world web automation challenges:
 
-- **Stale elements and dynamic re-rendering**: Shopify refreshes certain DOM elements after actions like clicking the "+" button. To solve this, we re-locate elements each time within loops.
+- **Stale elements and dynamic re-rendering**: Shopify refreshes certain DOM elements after actions like clicking the "+" button. To solve this, re-locate elements each time within loops.
 - **Variant selection fallback (optional)**: In some Shopify setups, the default product variant might not register correctly when loading the page. While currently unnecessary, toggling variants before adding to cart is kept as a precaution to ensure the intended variant is selected.
 - **Click intercept issues**: JS-based clicks were used (`execute_script`) instead of `.click()` to bypass overlays and animations.
 - **Unreliable quantity update**: The quantity doesn’t always update on the first `+` click, so a loop was implemented to click and verify until it reaches `2`.
